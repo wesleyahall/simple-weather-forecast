@@ -1,4 +1,7 @@
 import React from 'react'
+import SearchBar from '../SearchBar'
+
+import '../../assets/lib/bootstrap.min.css'
 import './App.styl'
 
 class App extends React.Component {
@@ -10,6 +13,7 @@ class App extends React.Component {
           <h1 className='MainTitle'>
             React simple starter
           </h1>
+          <SearchBar />
           {children}
         </main>
       </div>
