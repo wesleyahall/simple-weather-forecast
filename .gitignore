@@ -43,3 +43,5 @@ app/bundle.js
 *.key
 
 app/containers/SearchBar/openapiweather.key
+
+app/containers/SearchBar/openapiweather.json
