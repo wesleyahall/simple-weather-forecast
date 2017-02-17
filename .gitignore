@@ -1,3 +1,5 @@
+app/containers/SearchBar/openapiweather.key
+
 # Logs
 logs
 *.log
