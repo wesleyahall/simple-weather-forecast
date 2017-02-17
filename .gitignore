@@ -1,4 +1,4 @@
-app/containers/SearchBar/openapiweather.key
+# app/containers/SearchBar/openapiweather.json
 
 # Logs
 logs
@@ -39,3 +39,7 @@ jspm_packages
 .node_repl_history
 
 app/bundle.js
+
+*.key
+
+app/containers/SearchBar/openapiweather.key
