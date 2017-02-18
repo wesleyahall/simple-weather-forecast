@@ -21,7 +21,10 @@ class SearchBar extends React.Component {
 
   render () {
     return (
-      <form onSubmit={::this.onFormSubmit} className='input-group'>
+      <form
+        className='input-group'
+        onSubmit={::this.onFormSubmit}
+      >
         <input
           placeholder='Get a five-day forcast in your favorite cities.'
           className='form-control'
