@@ -12,3 +12,13 @@ Checkout this repo, install dependencies, then start the dev server with:
   - `npm i -g eslint babel-eslint
    eslint-config-es2015 eslint-config-standard eslint-config-standard-react eslint-plugin-react eslint`
   - `npm run dev`
+
+
+__You will have to provide two json files int he app/auth directory, both in the form of__:
+  ```
+  {
+    "key": "YOUR_API_KEY_GOES_HERE"
+  }
+  ```
+  - app/auth/openweathermap.json
+  - app/auth/googlemapsapi.json
