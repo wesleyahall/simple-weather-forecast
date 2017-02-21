@@ -22,11 +22,13 @@ class WeatherChart extends React.Component {
     let dataMin = this.getMin(this.props.data)
 
     return (
-      <Sparklines className='WeatherChart' data={this.props.data}>
+      <Sparklines height={200} className='WeatherChart' data={this.props.data}>
         <SparklinesLine color={this.props.color} />
         <SparklinesSpots />
         <SparklinesReferenceLine type={this.props.lineType} />
-        <div className='DataAverage'><strong>Average {this.props.label}</strong>: {dataAverage} {this.props.units}</div>
+        <div className='DataAverage'>
+          <strong>Average {this.props.label}</strong>: {dataAverage} {this.props.units}
+        </div>
         <div className='DataMaxMin'>
           <span className='DataMax'><strong>Max {this.props.label}</strong>: {dataMax} {this.props.units}</span>
           <span className='DataMin'><strong>Min {this.props.label}</strong>: {dataMin} {this.props.units}</span>
