@@ -20,9 +20,10 @@ class WeatherList extends React.Component {
             className='WeatherChart'
             color='red'
             data={temps}
-            lineType='median'
+            lineType='avg'
+            label='Temp'
+            units='°F'
             isTemp
-            label='Temperature'
           />
         </td>
         <td width={230}>
@@ -30,8 +31,9 @@ class WeatherList extends React.Component {
             className='WeatherChart'
             color='blue'
             data={pressures}
-            lineType='median'
+            lineType='avg'
             label='Pressure'
+            units='hPA'
           />
         </td>
         <td width={230}>
@@ -39,8 +41,9 @@ class WeatherList extends React.Component {
             className='WeatherChart'
             color='green'
             data={humidities}
-            lineType='median'
+            lineType='avg'
             label='Humidity'
+            units='%'
           />
         </td>
       </tr>
