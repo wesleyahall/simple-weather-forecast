@@ -1,23 +1,55 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import WeatherChart from '../../components/WeatherChart'
+import './WeatherList.styl'
 
 class WeatherList extends React.Component {
 
   renderWeather (cityData) {
     const cityName = cityData.city.name
+    const temps = cityData.list.map(weather => weather.main.temp)
+    const pressures = cityData.list.map(weather => weather.main.pressure)
+    const humidities = cityData.list.map(weather => weather.main.humidity)
+    let key = `${cityName}-${Date.now()}`
+
     return (
-      <tr>
-        <td>{cityName}</td>
-        <td>{cityData.main.temp}</td>
-        <td>{cityData.main.pressure}</td>
-        <td>{cityData.main.humidity}</td>
+      <tr className='WeatherList__Row' key={key}>
+        <td vertical-align='middle' display='table-cell' width={120}>{cityName}</td>
+        <td width={230}>
+          <WeatherChart
+            className='WeatherChart'
+            color='red'
+            data={temps}
+            lineType='median'
+            isTemp
+            label='Temperature'
+          />
+        </td>
+        <td width={230}>
+          <WeatherChart
+            className='WeatherChart'
+            color='blue'
+            data={pressures}
+            lineType='median'
+            label='Pressure'
+          />
+        </td>
+        <td width={230}>
+          <WeatherChart
+            className='WeatherChart'
+            color='green'
+            data={humidities}
+            lineType='median'
+            label='Humidity'
+          />
+        </td>
       </tr>
     )
   }
 
   render () {
     return (
-      <table className='table table-hover'>
+      <table className='WeatherList table table-hover'>
         <thead>
           <tr>
             <th>City</th>
@@ -27,7 +59,7 @@ class WeatherList extends React.Component {
           </tr>
         </thead>
         <tbody>
-          { this.props.weather.map(this.renderWeather) }
+          { this.props.weather.map(::this.renderWeather) }
         </tbody>
       </table>
     )
@@ -39,7 +71,7 @@ WeatherList.propTypes = {
 }
 
 function mapStateToProps ({ weather }) {
-  return ({ weather })
+  return { weather }
 }
 
 export default connect(mapStateToProps)(WeatherList)
