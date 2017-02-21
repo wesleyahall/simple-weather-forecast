@@ -6,6 +6,18 @@ import '../../assets/lib/bootstrap.min.css'
 import './App.styl'
 
 class App extends React.Component {
+  componentDidMount () {
+    const script = document.createElement('script')
+    const API = require('../../auth/googlemapsapi.json')
+    const API_KEY = API.key
+
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}`
+    script.async = true
+    script.defer = true
+    script.type = 'text/javascript'
+    document.body.appendChild(script)
+  }
+
   render () {
     const { children } = this.props
     return (

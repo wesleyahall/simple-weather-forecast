@@ -11,16 +11,16 @@ class WeatherList extends React.Component {
     const temps = cityData.list.map(weather => weather.main.temp)
     const pressures = cityData.list.map(weather => weather.main.pressure)
     const humidities = cityData.list.map(weather => weather.main.humidity)
-    let key = `${cityName}-${Date.now()}`
-    console.log(cityData)
     const {lon, lat} = cityData.city.coord
+
+    let key = `${cityName}-${Date.now()}`
 
     return (
       <tr className='WeatherList__Row' key={key}>
-        <td vertical-align='middle' display='table-cell' width={120}>
-          <GoogleMap lng={lon} lat={lat} />
+        <td vertical-align='middle' display='table-cell'>
+          <GoogleMap className='GoogleMap' lng={lon} lat={lat} />
         </td>
-        <td width={230}>
+        <td>
           <WeatherChart
             className='WeatherChart'
             color='red'
@@ -31,7 +31,7 @@ class WeatherList extends React.Component {
             isTemp
           />
         </td>
-        <td width={230}>
+        <td>
           <WeatherChart
             className='WeatherChart'
             color='blue'
@@ -41,7 +41,7 @@ class WeatherList extends React.Component {
             units='hPA'
           />
         </td>
-        <td width={230}>
+        <td>
           <WeatherChart
             className='WeatherChart'
             color='green'
