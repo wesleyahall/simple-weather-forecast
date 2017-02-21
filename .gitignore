@@ -44,5 +44,3 @@ app/bundle.js
 
 app/auth/googlemapsapi.json
 app/auth/openweathermap.json
-
-app/auth/googlemapsapi.json
