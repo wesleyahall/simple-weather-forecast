@@ -6,9 +6,13 @@ import './WeatherList.styl'
 
 class WeatherList extends React.Component {
 
+  convertKtoF (kValue) {
+    return 9 / 5 * (kValue - 273) + 32
+  }
+
   renderWeather (cityData) {
     const cityName = cityData.city.name
-    const temps = cityData.list.map(weather => weather.main.temp)
+    const temps = cityData.list.map(weather => this.convertKtoF(weather.main.temp))
     const pressures = cityData.list.map(weather => weather.main.pressure)
     const humidities = cityData.list.map(weather => weather.main.humidity)
     const {lon, lat} = cityData.city.coord

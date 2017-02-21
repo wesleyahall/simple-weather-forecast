@@ -8,10 +8,6 @@ class WeatherChart extends React.Component {
     return _.round(_.sum(data) / data.length)
   }
 
-  convertKtoF (kValue) {
-    return 9 / 5 * (kValue - 273) + 32
-  }
-
   getMax (data) {
     return _.round(Math.max.apply(null, data))
   }
@@ -21,15 +17,10 @@ class WeatherChart extends React.Component {
   }
 
   render () {
-    let dataAverage = this.props.isTemp
-      ? this.convertKtoF(this.average(this.props.data))
-      : this.average(this.props.data)
-    let dataMax = this.props.isTemp
-      ? this.convertKtoF(this.getMax(this.props.data))
-      : this.getMax(this.props.data)
-    let dataMin = this.props.isTemp
-      ? this.convertKtoF(this.getMin(this.props.data))
-      : this.getMin(this.props.data)
+    let dataAverage = this.average(this.props.data)
+    let dataMax = this.getMax(this.props.data)
+    let dataMin = this.getMin(this.props.data)
+
     return (
       <Sparklines className='WeatherChart' data={this.props.data}>
         <SparklinesLine color={this.props.color} />
