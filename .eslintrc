@@ -4,6 +4,7 @@
   "env": {},
   "globals": {"expect": true},
   "rules": {
-    "react/jsx-no-bind": "off"
+    "react/jsx-no-bind": "off",
+    "no-new": 0
   }
 }
