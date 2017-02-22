@@ -1,9 +1,9 @@
 {
-  "name": "MFI-React-Redux-Boilerplate",
+  "name": "simple-weather-forecast",
   "version": "1.0.0",
-  "description": "Simple boilerplate package for Redux & React w/ Babel, Stylus, & testing support.",
+  "description": "Simple test app for react/redux. Gives 5 day weather forecasts.",
   "main": "app/index.js",
-  "repository": "git@github.com:mfi-dev/react-redux-boilerplate.git",
+  "repository": "git@github.com:wesleyahall/simple-weather-forecast",
   "scripts": {
     "start": "babel-node dev-server.js"
   },
