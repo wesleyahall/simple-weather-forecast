@@ -9,8 +9,7 @@ Checkout this repo, install dependencies, then start the dev server with:
 
   - `npm i`
 
-  - `npm i -g eslint babel-eslint
-   eslint-config-es2015 eslint-config-standard eslint-config-standard-react eslint-plugin-react eslint`
+  - `npm i -g eslint babel-eslint eslint-config-es2015 eslint-config-standard eslint-config-standard-react eslint-plugin-react eslint`
 
   - `npm start`
 
