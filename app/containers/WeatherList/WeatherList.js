@@ -12,16 +12,21 @@ class WeatherList extends React.Component {
 
   renderWeather (cityData) {
     const cityName = cityData.city.name
+    const cityCountry = cityData.city.country
     const temps = cityData.list.map(weather => this.convertKtoF(weather.main.temp))
     const pressures = cityData.list.map(weather => weather.main.pressure)
     const humidities = cityData.list.map(weather => weather.main.humidity)
     const {lon, lat} = cityData.city.coord
-
+    console.log(cityData)
     let key = `${cityName}-${Date.now()}`
 
     return (
       <tr className='WeatherList__Row' key={key}>
         <td display='table-cell'>
+          <div className='CityData'>
+            <div className='CityName'><strong>{cityName}</strong>, {cityCountry}</div>
+            <div className='SeaLevel'><strong>Sea Level</strong>: {cityData.list[0].main.sea_level}</div>
+          </div>
           <GoogleMap className='GoogleMap' lng={lon} lat={lat} />
         </td>
         <td>
