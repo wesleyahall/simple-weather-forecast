@@ -1,6 +1,6 @@
 import React from 'react'
-import SearchBar from '../SearchBar'
-import WeatherList from '../WeatherList'
+import SearchBar from '../../containers/SearchBar'
+import WeatherList from '../../containers/WeatherList'
 
 import '../../assets/lib/bootstrap.min.css'
 import './App.styl'
