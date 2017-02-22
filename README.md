@@ -21,5 +21,7 @@ __You will have to provide two json files int he app/auth directory, both in the
     "key": "YOUR_API_KEY_GOES_HERE"
   }
   ```
+  [OpenWeatherMap API](http://openweathermap.org)
   - app/auth/openweathermap.json
+  [Google Maps API](https://developers.google.com/maps/) (Step 1, "Get a key")
   - app/auth/googlemapsapi.json
