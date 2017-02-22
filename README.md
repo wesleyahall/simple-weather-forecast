@@ -11,7 +11,8 @@ Checkout this repo, install dependencies, then start the dev server with:
 
   - `npm i -g eslint babel-eslint
    eslint-config-es2015 eslint-config-standard eslint-config-standard-react eslint-plugin-react eslint`
-  - `npm run dev`
+
+  - `npm start`
 
 
 __You will have to provide two json files int he app/auth directory, both in the form of__:
