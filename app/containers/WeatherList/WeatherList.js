@@ -21,7 +21,7 @@ class WeatherList extends React.Component {
 
     return (
       <tr className='WeatherList__Row' key={key}>
-        <td vertical-align='middle' display='table-cell'>
+        <td display='table-cell'>
           <GoogleMap className='GoogleMap' lng={lon} lat={lat} />
         </td>
         <td>
